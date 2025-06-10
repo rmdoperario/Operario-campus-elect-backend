@@ -3,6 +3,8 @@ model Position {
     title String
 
     Candidate Candidate[]
+    Vote Vote[]
+  
 }
 
    

@@ -4,10 +4,10 @@ model Student {
     name String
     department String
 
-    Candidate Candidate[]
-
-
     createdAt DateTime @default(now())
-
     @@index([studentId])
+
+    Candidate Candidate[]
+    Vote Vote[]
+
 }
