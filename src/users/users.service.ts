@@ -31,4 +31,16 @@ export class UsersService {
         return student;
 
     }
+
+    async createStudent(data: {
+        studentId: string;
+        name: string;
+        email: string;
+        department: string;
+        createdAt?: Date| string;
+    }): Promise<Student> {
+        return this.prisma.student.create({
+            data: data
+        });
+    }
 }
